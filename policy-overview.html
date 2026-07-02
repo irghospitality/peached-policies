@@ -71,7 +71,7 @@
     font-size: 14px;
     margin-bottom: 28px;
   }
-  .intro { font-size: 16px; margin-bottom: 40px; max-width: 620px; }
+  .intro { font-size: 16px; margin-bottom: 40px; }
 
   .cards {
     display: grid;
@@ -117,6 +117,28 @@
     font-weight: 700;
   }
   .card.meals .go, .card.meals h2 { color: #3c5719; }
+
+  .sign-box {
+    padding: 30px;
+    border-radius: 14px;
+    background: var(--blush);
+    border: 1px solid var(--coral);
+  }
+  .sign-box .eyebrow { color: #8a5a3c; }
+  .sign-box p { margin-top: 0; color: #4a3a30; font-size: 14.5px; }
+  .btn {
+    display: inline-block;
+    background: var(--lime);
+    color: #1a2e05;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 15px;
+    padding: 13px 24px;
+    border-radius: 8px;
+    transition: opacity 0.15s ease;
+  }
+  .btn:hover { opacity: 0.85; }
+  .btn:focus-visible { outline: 3px solid var(--ink); outline-offset: 2px; }
 
   footer {
     max-width: 780px;
