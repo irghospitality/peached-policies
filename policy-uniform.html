@@ -71,3 +71,351 @@
 
   h2 {
     font-weight: 700;
+    font-size: 15px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin: 44px 0 4px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--coral);
+    color: var(--coral-deep);
+  }
+  h3 {
+    font-weight: 600;
+    font-size: 17px;
+    margin: 22px 0 6px;
+    color: #4a2b26;
+  }
+  p { font-size: 15.5px; margin: 8px 0; }
+  ul { margin: 8px 0 0; padding-left: 22px; }
+  li { font-size: 15.5px; margin-bottom: 6px; }
+  strong { font-weight: 700; }
+
+  .accent-head {
+    font-family: 'Pacifico', cursive;
+    font-weight: 400;
+    font-size: 20px;
+    margin: 40px 0 10px;
+    color: var(--coral-deep);
+  }
+  .agreement {
+    background: #fff;
+    border: 1px solid var(--coral);
+    border-radius: 12px;
+    padding: 20px 22px;
+    margin-top: 10px;
+  }
+  .agreement ul { margin-top: 4px; }
+  .agreement .costs {
+    display: flex;
+    gap: 24px;
+    margin-top: 14px;
+    padding-top: 14px;
+    border-top: 1px solid var(--blush);
+    font-size: 14.5px;
+  }
+  .agreement .costs strong { display: block; font-size: 16px; }
+  .note {
+    font-size: 13px;
+    color: var(--gray);
+    margin-top: 14px;
+    font-style: italic;
+  }
+
+  .pagenav {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 60px;
+    padding-top: 24px;
+    border-top: 2px solid var(--coral);
+    font-size: 14px;
+    font-weight: 600;
+  }
+  .pagenav a { color: var(--coral-deep); text-decoration: none; }
+
+  .lookbook-tagline {
+    font-size: 15px;
+    color: #3a3a3a;
+    max-width: 560px;
+  }
+  .lookbook-tagline .script {
+    font-family: 'Pacifico', cursive;
+    font-size: 19px;
+    color: var(--coral-deep);
+    display: block;
+    margin-top: 8px;
+  }
+  .lookbook-gallery {
+    margin-top: 16px;
+    border-radius: 14px;
+    overflow: hidden;
+    border: 1px solid var(--coral);
+  }
+  .lookbook-gallery img { width: 100%; display: block; }
+  .lookbook-caption {
+    font-size: 13px;
+    color: var(--gray);
+    margin-top: 8px;
+    font-style: italic;
+  }
+
+  .swatch-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 16px;
+    margin: 14px 0 6px;
+  }
+  @media (max-width: 560px) { .swatch-grid { grid-template-columns: repeat(3, 1fr); } }
+  .swatch { text-align: center; }
+  .swatch .chip {
+    width: 100%;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    border: 1px solid rgba(0,0,0,0.12);
+    margin-bottom: 6px;
+  }
+  .swatch .name {
+    font-size: 10px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #4a2b26;
+  }
+  .swatch-note {
+    font-size: 12px;
+    color: var(--coral-deep);
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-top: -2px;
+  }
+
+  .texture-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+    margin-top: 14px;
+  }
+  @media (max-width: 560px) { .texture-grid { grid-template-columns: repeat(2, 1fr); } }
+  .texture-grid figure { margin: 0; }
+  .texture-grid img { width: 100%; border-radius: 10px; display: block; }
+  .texture-grid figcaption {
+    font-size: 11px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #4a2b26;
+    margin-top: 6px;
+    text-align: center;
+  }
+
+  .inseam-badge {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: var(--coral-deep);
+    color: #fff;
+    border-radius: 10px;
+    padding: 14px 18px;
+    margin-top: 16px;
+  }
+  .inseam-badge .num { font-size: 26px; font-weight: 700; }
+  .inseam-badge .desc { font-size: 13.5px; opacity: 0.9; }
+
+  footer {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 0 24px 60px;
+    font-size: 12px;
+    color: var(--gray);
+  }
+</style>
+</head>
+<body>
+  <div class="topbar"></div>
+  <header>
+    <svg class="mark" viewBox="165 80 390 475" aria-hidden="true">
+      <path d="M368,150 C395,110 450,90 510,100 C495,140 450,168 405,158 C388,154 372,155 368,150 Z" fill="#A8C93A"/>
+      <path d="M372,148 C400,144 430,132 455,116" stroke="#ffffff" stroke-width="2" fill="none" opacity="0.45" stroke-linecap="round"/>
+      <path d="M362,158 C358,138 362,116 372,98" stroke="#7A5222" stroke-width="7" fill="none" stroke-linecap="round"/>
+      <circle cx="360" cy="360" r="185" fill="#F5911E"/>
+      <path d="M300,210 C240,250 232,470 300,510 C260,470 258,250 300,210 Z" fill="#FFFFFF" opacity="0.5"/>
+      <path d="M300,210 C240,250 232,470 300,510" stroke="#ffffff" stroke-width="3" fill="none" opacity="0.7" stroke-linecap="round"/>
+    </svg>
+  </header>
+
+  <nav class="crumbs">
+    <a href="index.html">All Policies</a>
+    <a href="policy-uniform.html" class="active">Dress Code</a>
+  </nav>
+
+  <div class="wrap">
+    <span class="tag">FOH Policy</span>
+    <h1>FOH Dress Code</h1>
+    <p class="intro">Our appearance is part of the guest experience. A clean, professional, and elevated look helps create a welcoming atmosphere, builds trust with our guests, and reflects the pride we take in our work. Employees are expected to arrive in uniform, well-groomed, and ready for every shift.</p>
+    <p class="intro"><strong>Employees who arrive out of dress code will be sent home at manager's discretion to change and will not be paid for time missed as a result.</strong></p>
+    <p class="intro">If you have questions about an item or need accommodation, speak with a manager before your shift.</p>
+
+    <h2>Hosts &amp; Servers</h2>
+    <p>Hosts and Servers play an important role in creating the guest experience. Team Members are expected to maintain a polished, professional appearance that reflects The Peached Tortilla's commitment to warm and welcoming hospitality.</p>
+
+    <h3>Tops</h3>
+    <ul>
+      <li>Professional blouses, button-down shirts, polos, cardigans, or other business-casual tops are permitted.</li>
+      <li>Short or long sleeves only; sleeveless, off-the-shoulder, or strapless tops are not permitted.</li>
+      <li>Solid colors are preferred; subtle stripes or other business-casual patterns are acceptable.</li>
+      <li>No large graphics, images, wording, or visible brand logos.</li>
+      <li>Tops must provide full coverage of the chest, midriff, and back while standing, bending, and reaching.</li>
+      <li>Sheer or see-through fabrics are not permitted.</li>
+      <li>Tops must fit appropriately and may not be excessively tight, oversized, or revealing.</li>
+      <li>Clothing must be clean, wrinkle-free, and in good condition.</li>
+    </ul>
+
+    <h3>Bottoms</h3>
+    <ul>
+      <li>Jeans, dress pants, chinos, tailored pants, or shorts are permitted.</li>
+      <li>Dresses and skirts are permitted for Hosts and Servers and must be knee-length.</li>
+      <li>Shorts must have a minimum 5-inch inseam and provide full coverage while standing, bending, and reaching.</li>
+      <li>Bottoms must fit appropriately and may not be excessively baggy, overly tight, or revealing.</li>
+      <li>Leggings, joggers, athletic wear, cargo pants, distressed denim, and clothing that is torn, ripped, or frayed are not permitted.</li>
+    </ul>
+
+    <h2>Bartenders</h2>
+    <p>Bartenders create an inviting atmosphere by engaging with guests, delivering exceptional service, and keeping the energy of the bar flowing. Their appearance should reflect the same level of professionalism and hospitality they bring to every interaction.</p>
+
+    <h3>Tops</h3>
+    <ul>
+      <li>Must have a collar and be a button-down shirt, polo, knit polo, or other professional collared shirt.</li>
+      <li>Short or long sleeves only; sleeveless shirts are not permitted.</li>
+      <li>Solid colors are preferred; subtle stripes or other business-casual patterns are acceptable.</li>
+      <li>No large graphics, images, wording, or visible brand logos.</li>
+      <li>Shirts must provide full coverage while standing, bending, and reaching.</li>
+      <li>Sheer or see-through fabrics are not permitted.</li>
+      <li>Shirts must fit appropriately and may not be excessively tight, oversized, or revealing.</li>
+      <li>Shirts must be clean, wrinkle-free, and in good condition.</li>
+    </ul>
+
+    <h3>Bottoms</h3>
+    <ul>
+      <li>Pants and shorts must be solid dark colors: black, dark gray, dark blue, or dark-wash denim.</li>
+      <li>Jeans, chinos, dress pants, or tailored pants are permitted. Skirts and dresses are not permitted.</li>
+      <li>Shorts must have a minimum 5-inch inseam and provide full coverage while standing, bending, and reaching.</li>
+      <li>Bottoms must fit appropriately and may not be excessively baggy, overly tight, or revealing.</li>
+      <li>Leggings, joggers, athletic wear, cargo pants, distressed denim, and clothing that is torn, ripped, or frayed are not permitted.</li>
+    </ul>
+
+    <h2>Barbacks &amp; Food Runners</h2>
+
+    <h3>Tops</h3>
+    <ul>
+      <li>Gray Peached Tortilla t-shirts only</li>
+      <li>Shirts must be clean, wrinkle-free, and in good condition</li>
+    </ul>
+
+    <h3>Bottoms</h3>
+    <ul>
+      <li>Black or dark-wash blue denim pants or shorts only — no leggings, joggers, athletic wear, cargo pants, other pant styles, or skirts</li>
+      <li>Clothing should fit properly and may not be excessively baggy or overly tight</li>
+      <li>Shorts must have at least a 5-inch inseam and fully cover the backside while standing or bending</li>
+      <li>No faded, light-wash, distressed, torn, ripped, or frayed denim</li>
+    </ul>
+
+    <h2>Manager on Duty (MOD)</h2>
+    <p>Managers are expected to present themselves in a manner that reflects their leadership role. Attire must be clean, neat, well-maintained, and appropriate for interacting with guests, employees, and vendors.</p>
+    <p>Managers set the standard for their teams and are expected to remain polished, professional, and guest-ready at all times. This expectation applies regardless of assignment, including while working an Expo/MOD shift.</p>
+    <p>Clothing must fit appropriately and may not be excessively tight, oversized, or revealing. T-shirts, athletic wear, clothing with large logos or graphics, and other excessively casual attire are not permitted.</p>
+
+    <h2>Shoes</h2>
+    <ul>
+      <li>Closed-toe, closed-heel, slip-resistant shoes are required.</li>
+      <li>Shoes must be primarily black, white, brown, dark gray, dark blue, or another neutral color. Brightly colored, neon, or overly patterned shoes are not permitted.</li>
+      <li>Sneakers, walking shoes, flats, or boots are permitted.</li>
+      <li>High heels, flip-flops, slippers, sandals, and other open-toe or open-heel shoes are not permitted.</li>
+      <li>Shoes must be clean, well-maintained, and in good repair.</li>
+    </ul>
+
+    <h2>Additional Requirements</h2>
+    <ul>
+      <li>Bartenders and Servers must wear a company-approved apron at all times while working. Aprons must be clean, wrinkle-free, and in good condition.</li>
+      <li>Hats, sunglasses, and bandanas are not permitted while working unless approved as a reasonable accommodation for medical or religious reasons.</li>
+    </ul>
+
+    <h2>Hygiene &amp; Grooming</h2>
+    <ul>
+      <li>Good personal hygiene is expected at all times. Team Members should report to work clean, well-groomed, and free from body odor.</li>
+      <li>Hair must be clean, neat, and secured away from the face. Hair that is shoulder-length or longer must be tied back while working.</li>
+      <li>Facial hair must be clean and neatly groomed.</li>
+      <li>Jewelry should be minimal, not oversized, and must not interfere with job duties or create a safety hazard.</li>
+      <li>Hands and fingernails must be clean and well-maintained. Chipped nail polish and excessively long artificial nails that interfere with safe food handling or job duties are not permitted.</li>
+      <li>Perfume, cologne, and scented lotions should be used sparingly or avoided, as guests and coworkers may be sensitive to strong fragrances.</li>
+    </ul>
+
+    <h2>Lookbook</h2>
+    <p class="lookbook-tagline">We're warm, welcoming, and a little playful. Our style is an extension of our hospitality — approachable, confident, and elevated.<span class="script">Thanks for showing up as your best self.</span></p>
+
+    <h3>Hosts &amp; Servers</h3>
+    <div class="lookbook-gallery"><img src="lookbook-hosts-servers.jpg" alt="Hosts and Servers outfit examples"></div>
+
+    <h3>Bartenders</h3>
+    <div class="lookbook-gallery"><img src="lookbook-bartenders.jpg" alt="Bartender outfit examples"></div>
+
+    <h3>Our Colors</h3>
+    <p class="swatch-note">Suggested palette — not required</p>
+    <div class="swatch-grid">
+      <div class="swatch"><div class="chip" style="background:#F8F5EC"></div><div class="name">Cream</div></div>
+      <div class="swatch"><div class="chip" style="background:#D9D2BE"></div><div class="name">Stone</div></div>
+      <div class="swatch"><div class="chip" style="background:#B98A4C"></div><div class="name">Saddle</div></div>
+      <div class="swatch"><div class="chip" style="background:#C05A2E"></div><div class="name">Rust</div></div>
+      <div class="swatch"><div class="chip" style="background:#8B5D74"></div><div class="name">Plum</div></div>
+      <div class="swatch"><div class="chip" style="background:#8B9467"></div><div class="name">Sage</div></div>
+      <div class="swatch"><div class="chip" style="background:#545F37"></div><div class="name">Olive</div></div>
+      <div class="swatch"><div class="chip" style="background:#2E4632"></div><div class="name">Forest</div></div>
+      <div class="swatch"><div class="chip" style="background:#ADC4D6"></div><div class="name">Chambray</div></div>
+      <div class="swatch"><div class="chip" style="background:#29344A"></div><div class="name">Navy</div></div>
+      <div class="swatch"><div class="chip" style="background:#3B3B3B"></div><div class="name">Charcoal</div></div>
+      <div class="swatch"><div class="chip" style="background:#000000"></div><div class="name">Black</div></div>
+    </div>
+    <p>These are suggestions, not requirements — a palette that complements our dining room and photographs well on the floor. Any color that meets the standards for your role is welcome; these are simply the ones that always work. Woven textures, fine stripes, and small all-over prints are acceptable. <strong>One exception: bartender bottoms must be dark solids.</strong></p>
+
+    <h3>Textures &amp; Patterns We Love</h3>
+    <div class="texture-grid">
+      <figure><img src="lookbook-texture-chambray-blue.jpg" alt="Chambray blue texture"><figcaption>Chambray Blue</figcaption></figure>
+      <figure><img src="lookbook-texture-green-chambray.jpg" alt="Green chambray texture"><figcaption>Green Chambray</figcaption></figure>
+      <figure><img src="lookbook-texture-stripe.jpg" alt="Stripe pattern"><figcaption>Stripe</figcaption></figure>
+      <figure><img src="lookbook-texture-micro-floral.jpg" alt="Micro-floral pattern"><figcaption>Micro-Floral</figcaption></figure>
+    </div>
+
+    <h3>Approved Shoe Options</h3>
+    <p>Comfortable. Safe. Stylish. Socks required.</p>
+    <div class="lookbook-gallery"><img src="lookbook-shoes.jpg" alt="Approved shoe options"></div>
+    <p>Any brand — these are the shapes we like. Keep them a solid or neutral color and keep them clean. <strong>Closed toe, closed heel, slip-resistant, socks on. No neon, no loud patterns, no high heels, no open backs.</strong></p>
+
+    <h3>Types of Shorts</h3>
+    <p>Chino &middot; Denim &middot; Linen Blend &middot; Work Short</p>
+    <div class="lookbook-gallery"><img src="lookbook-shorts.jpg" alt="Approved shorts examples"></div>
+    <div class="inseam-badge"><span class="num">5"</span><span class="desc">Minimum, measured from inseam to hem.</span></div>
+
+    <div class="accent-head">Uniform &amp; Property Agreement</div>
+    <div class="agreement">
+      <p>By working in a uniformed position, you understand and agree to the following:</p>
+      <ul>
+        <li>The two issued Peached Tortilla t-shirts are yours to keep. Additional shirts may be purchased at the employee discount rate.</li>
+        <li>Aprons are company property and must be returned upon resignation, termination, or separation from employment.</li>
+        <li>You are responsible for laundering, ironing, and generally caring for all issued uniform items.</li>
+        <li>Uniform items may not be altered.</li>
+        <li>If an apron is not returned or is damaged through negligence, the Company may deduct the replacement cost from your final paycheck where permitted by law.</li>
+      </ul>
+      <div class="costs">
+        <div><strong>$65</strong>Bartender Apron</div>
+        <div><strong>$50</strong>Server Apron</div>
+      </div>
+      <p class="note">Uniform items are issued and receipt is confirmed with a manager separately — this page is for reference on the policy itself.</p>
+    </div>
+
+    <div class="pagenav">
+      <a href="index.html">← Back to All Policies</a>
+    </div>
+  </div>
+
+  <footer>Peached &middot; Internal Policy Center</footer>
+</body>
+</html>
