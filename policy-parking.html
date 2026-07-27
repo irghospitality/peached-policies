@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Parking — Peached</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Pacifico&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ivory: #F2F0E3;
+    --gray: #999999;
+    --ink: #000000;
+    --charcoal: #4a4a4a;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--ivory);
+    color: var(--ink);
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.65;
+  }
+  .topbar { background: var(--ink); height: 6px; }
+  header {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 40px 24px 24px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .mark { width: 40px; height: 40px; flex-shrink: 0; }
+
+  nav.crumbs {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 0 24px 28px;
+    display: flex;
+    gap: 20px;
+    font-size: 13px;
+    font-weight: 600;
+    border-bottom: 2px solid var(--gray);
+  }
+  nav.crumbs a { color: var(--gray); text-decoration: none; padding-bottom: 14px; }
+  nav.crumbs a.active { color: var(--ink); border-bottom: 2px solid var(--ink); }
+
+  .wrap { max-width: 780px; margin: 0 auto; padding: 36px 24px 80px; }
+
+  .tag {
+    display: inline-block;
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    font-weight: 700;
+    background: var(--gray);
+    color: #ffffff;
+    padding: 5px 12px;
+    border-radius: 20px;
+    margin-bottom: 14px;
+  }
+  h1 { font-weight: 700; font-size: 36px; margin: 0 0 12px; line-height: 1.15; }
+  .intro { font-size: 15.5px; margin-bottom: 8px; color: #3a3a3a; }
+
+  h2 {
+    font-weight: 700;
+    font-size: 15px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin: 44px 0 4px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--gray);
+    color: var(--charcoal);
+  }
+  p { font-size: 15.5px; margin: 8px 0; }
+  ul { margin: 8px 0 0; padding-left: 22px; }
+  li { font-size: 15.5px; margin-bottom: 6px; }
+  strong { font-weight: 700; }
+
+  .callout {
+    background: #fff;
+    border-left: 4px solid var(--ink);
+    padding: 12px 16px;
+    border-radius: 0 8px 8px 0;
+    margin: 20px 0;
+    font-size: 15px;
+  }
+
+  .pagenav {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 60px;
+    padding-top: 24px;
+    border-top: 2px solid var(--gray);
+    font-size: 14px;
+    font-weight: 600;
+  }
+  .pagenav a { color: var(--charcoal); text-decoration: none; }
+
+  footer {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 0 24px 60px;
+    font-size: 12px;
+    color: var(--gray);
+  }
+</style>
+</head>
+<body>
+  <div class="topbar"></div>
+  <header>
+    <svg class="mark" viewBox="165 80 390 475" aria-hidden="true">
+      <path d="M368,150 C395,110 450,90 510,100 C495,140 450,168 405,158 C388,154 372,155 368,150 Z" fill="#A8C93A"/>
+      <path d="M372,148 C400,144 430,132 455,116" stroke="#ffffff" stroke-width="2" fill="none" opacity="0.45" stroke-linecap="round"/>
+      <path d="M362,158 C358,138 362,116 372,98" stroke="#7A5222" stroke-width="7" fill="none" stroke-linecap="round"/>
+      <circle cx="360" cy="360" r="185" fill="#F5911E"/>
+      <path d="M300,210 C240,250 232,470 300,510 C260,470 258,250 300,210 Z" fill="#FFFFFF" opacity="0.5"/>
+      <path d="M300,210 C240,250 232,470 300,510" stroke="#ffffff" stroke-width="3" fill="none" opacity="0.7" stroke-linecap="round"/>
+    </svg>
+  </header>
+
+  <nav class="crumbs">
+    <a href="index.html">All Policies</a>
+    <a href="policy-parking.html" class="active">Parking</a>
+  </nav>
+
+  <div class="wrap">
+    <span class="tag">Facility Policy</span>
+    <h1>Parking</h1>
+    <p class="intro">Where to park before and after your shift.</p>
+
+    <h2>Where You Can Park</h2>
+    <ul>
+      <li>The lot next to our main parking lot, behind the restaurant</li>
+      <li>On the street behind Toy Joy (Clay Ave, Austin, TX 78756)</li>
+    </ul>
+
+    <h2>Where You Cannot Park</h2>
+    <ul>
+      <li>Directly behind the restaurant</li>
+    </ul>
+
+    <div class="callout">If you're unsure where to park on a given day, check with a manager before your shift.</div>
+
+    <div class="pagenav">
+      <a href="index.html">← Back to All Policies</a>
+    </div>
+  </div>
+
+  <footer>Peached &middot; Internal Policy Center</footer>
+</body>
+</html>
