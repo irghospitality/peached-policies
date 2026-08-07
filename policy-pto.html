@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Requesting PTO — Peached</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Pacifico&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cream: #FCEEE1;
+    --blush: #FFE2D6;
+    --gray: #999999;
+    --ink: #000000;
+    --gold: #C98A2E;
+    --gold-deep: #8a5c1c;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--cream);
+    color: var(--ink);
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.65;
+  }
+  .topbar { background: var(--ink); height: 6px; }
+  header {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 40px 24px 24px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .mark { width: 40px; height: 40px; flex-shrink: 0; }
+
+  nav.crumbs {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 0 24px 28px;
+    display: flex;
+    gap: 20px;
+    font-size: 13px;
+    font-weight: 600;
+    border-bottom: 2px solid var(--gold);
+  }
+  nav.crumbs a { color: var(--gray); text-decoration: none; padding-bottom: 14px; }
+  nav.crumbs a.active { color: var(--ink); border-bottom: 2px solid var(--ink); }
+
+  .wrap { max-width: 780px; margin: 0 auto; padding: 36px 24px 80px; }
+
+  .tag {
+    display: inline-block;
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    font-weight: 700;
+    background: var(--gold);
+    color: #fff;
+    padding: 5px 12px;
+    border-radius: 20px;
+    margin-bottom: 14px;
+  }
+  h1 { font-weight: 700; font-size: 36px; margin: 0 0 12px; line-height: 1.15; }
+  .intro { font-size: 15.5px; margin-bottom: 8px; color: #3a3a3a; }
+
+  h2 {
+    font-weight: 700;
+    font-size: 15px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin: 44px 0 4px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--gold);
+    color: var(--gold-deep);
+  }
+  p { font-size: 15.5px; margin: 8px 0; }
+  strong { font-weight: 700; }
+
+  .steps {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 14px;
+  }
+  .step {
+    display: flex;
+    gap: 14px;
+    background: #fff;
+    border: 1px solid var(--gold);
+    border-radius: 12px;
+    padding: 16px 18px;
+  }
+  .step .num {
+    flex-shrink: 0;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: var(--gold-deep);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 14px;
+  }
+  .step .body p { margin: 0 0 4px; font-size: 15px; }
+  .step .body .path {
+    font-size: 13px;
+    color: var(--gold-deep);
+    font-weight: 600;
+    margin-top: 6px;
+  }
+
+  .rule-card {
+    background: #fff;
+    border: 1px solid var(--gold);
+    border-radius: 12px;
+    padding: 16px 18px;
+    margin-top: 12px;
+  }
+  .rule-card .label {
+    font-weight: 700;
+    color: var(--gold-deep);
+    margin-bottom: 4px;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 0.06em;
+  }
+  .rule-card p { margin: 0; }
+
+  .blackout-list {
+    border: 1px solid var(--gold);
+    border-radius: 12px;
+    overflow: hidden;
+    margin-top: 12px;
+    background: #fff;
+  }
+  .blackout-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 12px 18px;
+    border-bottom: 1px solid var(--blush);
+    font-size: 14.5px;
+  }
+  .blackout-row:last-child { border-bottom: none; }
+  .blackout-row .dates { font-weight: 700; white-space: nowrap; }
+  .blackout-row .reason { color: #555; text-align: right; }
+
+  .callout {
+    background: var(--blush);
+    border-left: 4px solid var(--gold-deep);
+    padding: 12px 16px;
+    border-radius: 0 8px 8px 0;
+    margin: 16px 0;
+    font-size: 15px;
+  }
+
+  .pagenav {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 60px;
+    padding-top: 24px;
+    border-top: 2px solid var(--gold);
+    font-size: 14px;
+    font-weight: 600;
+  }
+  .pagenav a { color: var(--gold-deep); text-decoration: none; }
+
+  footer {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 0 24px 60px;
+    font-size: 12px;
+    color: var(--gray);
+  }
+</style>
+</head>
+<body>
+  <div class="topbar"></div>
+  <header>
+    <svg class="mark" viewBox="165 80 390 475" aria-hidden="true">
+      <path d="M368,150 C395,110 450,90 510,100 C495,140 450,168 405,158 C388,154 372,155 368,150 Z" fill="#A8C93A"/>
+      <path d="M372,148 C400,144 430,132 455,116" stroke="#ffffff" stroke-width="2" fill="none" opacity="0.45" stroke-linecap="round"/>
+      <path d="M362,158 C358,138 362,116 372,98" stroke="#7A5222" stroke-width="7" fill="none" stroke-linecap="round"/>
+      <circle cx="360" cy="360" r="185" fill="#F5911E"/>
+      <path d="M300,210 C240,250 232,470 300,510 C260,470 258,250 300,210 Z" fill="#FFFFFF" opacity="0.5"/>
+      <path d="M300,210 C240,250 232,470 300,510" stroke="#ffffff" stroke-width="3" fill="none" opacity="0.7" stroke-linecap="round"/>
+    </svg>
+  </header>
+
+  <nav class="crumbs">
+    <a href="index.html">All Policies</a>
+    <a href="policy-pto.html" class="active">Requesting PTO</a>
+  </nav>
+
+  <div class="wrap">
+    <span class="tag">HR Policy</span>
+    <h1>Requesting PTO</h1>
+    <p class="intro">Every request follows the same four steps. Skipping a step means the time off is not approved.</p>
+
+    <h2>How to Request PTO</h2>
+    <div class="steps">
+      <div class="step">
+        <div class="num">1</div>
+        <div class="body"><p><strong>Talk to your GM first.</strong> Confirm the dates before you book travel or commit to plans.</p></div>
+      </div>
+      <div class="step">
+        <div class="num">2</div>
+        <div class="body"><p><strong>Write a coverage plan.</strong> Who is covering each shift, how your responsibilities will be handled, and any scheduling or payroll impact.</p></div>
+      </div>
+      <div class="step">
+        <div class="num">3</div>
+        <div class="body">
+          <p><strong>Submit the request in Toast</strong> — no later than three weeks out, unless it is an emergency. Your GM receives it by email and responds there. Log in at payroll.toasttab.com or use the MyToast app.</p>
+          <div class="path">Time Off → Request Time Off → Choose your dates (one full day = 8 hrs) → Add a reason in the Notes section → Submit</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="num">4</div>
+        <div class="body"><p><strong>Add your approved dates to the Google PTO Calendar.</strong> Your request is not complete until this is done.</p></div>
+      </div>
+    </div>
+
+    <h2>The Google PTO Calendar</h2>
+    <p>You have been invited to a shared Google PTO Calendar through your work email. It gives the whole team one view of who's out so coverage can be planned.</p>
+    <p>Once your PTO is approved, you are responsible for entering your approved dates to that calendar — your GM will not do it for you. This step is required, not optional.</p>
+
+    <h2>Additional Rules</h2>
+    <div class="rule-card">
+      <div class="label">Extended Time Off</div>
+      <p>Requests of more than five (5) consecutive days need executive team approval — your GM cannot approve these alone. Complete steps 1 and 2, then present the request and your coverage plan to the executive team.</p>
+    </div>
+    <div class="rule-card">
+      <div class="label">Coverage Limit</div>
+      <p>No more than two (2) managers out on PTO at the same time per location. Requests are taken in the order received. Exceptions need written approval from your GM and Regional Manager.</p>
+    </div>
+    <div class="rule-card">
+      <div class="label">Unapproved Time Off</div>
+      <p>Time off taken without completing all 4 steps above will be unpaid. Do not book travel or commit to plans before your request is approved.</p>
+    </div>
+
+    <h2>Blackout Dates</h2>
+    <p>Not approved except in an emergency or with written approval from your GM or Regional Manager.</p>
+    <div class="blackout-list">
+      <div class="blackout-row"><span class="dates">February 1–16</span><span class="reason">Valentine's Day period</span></div>
+      <div class="blackout-row"><span class="dates">May 1–12 &amp; May 25–26</span><span class="reason">Mother's Day, Graduation Weekend, and Memorial Day</span></div>
+      <div class="blackout-row"><span class="dates">August 23–September 14</span><span class="reason">Austin Restaurant Week</span></div>
+      <div class="blackout-row"><span class="dates">November 14–December 18</span><span class="reason">Holiday Season</span></div>
+      <div class="blackout-row"><span class="dates">Easter Brunch &amp; Labor Day Weekend</span><span class="reason">Dates vary annually</span></div>
+    </div>
+
+    <div class="pagenav">
+      <a href="index.html">← Back to All Policies</a>
+    </div>
+  </div>
+
+  <footer>Peached &middot; Internal Policy Center</footer>
+</body>
+</html>
