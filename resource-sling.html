@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Parking — Peached</title>
+<title>Sling Tutorials — Peached</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Pacifico&display=swap" rel="stylesheet">
@@ -12,12 +12,14 @@
     --ivory: #F2F0E3;
     --gray: #999999;
     --ink: #000000;
-    --charcoal: #4a4a4a;
+    --lime: #99CC33;
+    --lime-deep: #5a7a1c;
+    --green-tint: #eef3d9;
   }
   * { box-sizing: border-box; }
   body {
     margin: 0;
-    background: var(--ivory);
+    background: var(--green-tint);
     color: var(--ink);
     font-family: 'Poppins', sans-serif;
     line-height: 1.65;
@@ -41,7 +43,7 @@
     gap: 20px;
     font-size: 13px;
     font-weight: 600;
-    border-bottom: 2px solid var(--gray);
+    border-bottom: 2px solid var(--lime);
   }
   nav.crumbs a { color: var(--gray); text-decoration: none; padding-bottom: 14px; }
   nav.crumbs a.active { color: var(--ink); border-bottom: 2px solid var(--ink); }
@@ -54,8 +56,8 @@
     letter-spacing: 0.14em;
     text-transform: uppercase;
     font-weight: 700;
-    background: var(--gray);
-    color: #ffffff;
+    background: var(--lime);
+    color: #1a2e05;
     padding: 5px 12px;
     border-radius: 20px;
     margin-bottom: 14px;
@@ -63,51 +65,61 @@
   h1 { font-weight: 700; font-size: 36px; margin: 0 0 12px; line-height: 1.15; }
   .intro { font-size: 15.5px; margin-bottom: 8px; color: #3a3a3a; }
 
-  .location-block {
-    background: #fff;
-    border: 1px solid var(--gray);
-    border-radius: 14px;
-    padding: 24px 26px;
-    margin-top: 28px;
-  }
-  .location-block h2 {
+  h2 {
     font-weight: 700;
-    font-size: 20px;
-    margin: 0 0 14px;
-    color: var(--charcoal);
-  }
-  .location-block h3 {
-    font-weight: 700;
-    font-size: 13px;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    margin: 18px 0 4px;
-    color: var(--charcoal);
-  }
-  p { font-size: 15.5px; margin: 8px 0; }
-  ul { margin: 8px 0 0; padding-left: 22px; }
-  li { font-size: 15.5px; margin-bottom: 6px; }
-  strong { font-weight: 700; }
-
-  .callout {
-    background: #fff;
-    border-left: 4px solid var(--ink);
-    padding: 12px 16px;
-    border-radius: 0 8px 8px 0;
-    margin: 20px 0;
     font-size: 15px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin: 36px 0 4px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--lime);
+    color: var(--lime-deep);
   }
+
+  .video-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 14px;
+  }
+  .video-link {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    background: #fff;
+    border: 1px solid var(--lime);
+    border-radius: 12px;
+    padding: 16px 18px;
+    text-decoration: none;
+    color: var(--ink);
+    transition: transform 0.15s ease;
+  }
+  .video-link:hover { transform: translateY(-1px); }
+  .video-link .play {
+    flex-shrink: 0;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: var(--lime);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #1a2e05;
+    font-size: 14px;
+  }
+  .video-link .title { font-weight: 600; font-size: 15px; }
+  .video-link.sub { margin-left: 20px; }
 
   .pagenav {
     display: flex;
     justify-content: space-between;
     margin-top: 60px;
     padding-top: 24px;
-    border-top: 2px solid var(--gray);
+    border-top: 2px solid var(--lime);
     font-size: 14px;
     font-weight: 600;
   }
-  .pagenav a { color: var(--charcoal); text-decoration: none; }
+  .pagenav a { color: var(--lime-deep); text-decoration: none; }
 
   footer {
     max-width: 780px;
@@ -133,41 +145,37 @@
 
   <nav class="crumbs">
     <a href="index.html">All Policies</a>
-    <a href="policy-parking.html" class="active">Parking</a>
+    <a href="resource-sling.html" class="active">Sling Tutorials</a>
   </nav>
 
   <div class="wrap">
-    <span class="tag">Facility Policy</span>
-    <h1>Parking</h1>
-    <p class="intro">Where to park before and after your shift — rules vary by location, so check the section for where you work.</p>
+    <span class="tag">Resource</span>
+    <h1>Sling Tutorials</h1>
+    <p class="intro">Check out these quick demo videos to help you get started with Sling.</p>
 
-    <div class="location-block">
-      <h2>TPT – Burnet Road</h2>
-      <h3>Where You Can Park</h3>
-      <ul>
-        <li>The lot next to our main parking lot, behind the restaurant</li>
-        <li>On the street behind Toy Joy (Clay Ave, Austin, TX 78756)</li>
-      </ul>
-      <h3>Where You Cannot Park</h3>
-      <ul>
-        <li>Directly behind the restaurant</li>
-      </ul>
+    <h2>Getting Started</h2>
+    <div class="video-list">
+      <a class="video-link" href="https://youtu.be/mm3Ppmh0ILU?feature=shared" target="_blank" rel="noopener">
+        <span class="play">▶</span>
+        <span class="title">How to set up your account, availability, and time-off requests</span>
+      </a>
     </div>
 
-    <div class="location-block">
-      <h2>TPT – Cedar Park</h2>
-      <h3>Where You Can Park</h3>
-      <ul>
-        <li>Next to the dumpsters, on the far right side of the building</li>
-        <li>By the tile store</li>
-      </ul>
-      <h3>Where You Cannot Park</h3>
-      <ul>
-        <li>Any spaces directly around the restaurant, front or back</li>
-      </ul>
+    <h2>Sling Mobile App How-To Videos</h2>
+    <div class="video-list">
+      <a class="video-link" href="https://youtu.be/P7lLv5LkNk4?feature=shared" target="_blank" rel="noopener">
+        <span class="play">▶</span>
+        <span class="title">Dashboard</span>
+      </a>
+      <a class="video-link" href="https://youtu.be/FcpSUsxFk1s?feature=shared" target="_blank" rel="noopener">
+        <span class="play">▶</span>
+        <span class="title">Shifts</span>
+      </a>
+      <a class="video-link" href="https://youtu.be/fL3qanlyGkM?feature=shared" target="_blank" rel="noopener">
+        <span class="play">▶</span>
+        <span class="title">Tasks, Messages, and Newsfeed</span>
+      </a>
     </div>
-
-    <div class="callout">If you're unsure where to park on a given day, check with a manager before your shift.</div>
 
     <div class="pagenav">
       <a href="index.html">← Back to All Policies</a>

@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Absenteeism & Tardiness — Peached</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Pacifico&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ivory: #F2F0E3;
+    --coral: #F6B79B;
+    --blush: #FFE2D6;
+    --gray: #999999;
+    --ink: #000000;
+    --coral-deep: #a5453b;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--ivory);
+    color: var(--ink);
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.65;
+  }
+  .topbar { background: var(--ink); height: 6px; }
+  header {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 40px 24px 24px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .mark { width: 40px; height: 40px; flex-shrink: 0; }
+
+  nav.crumbs {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 0 24px 28px;
+    display: flex;
+    gap: 20px;
+    font-size: 13px;
+    font-weight: 600;
+    border-bottom: 2px solid var(--coral);
+  }
+  nav.crumbs a { color: var(--gray); text-decoration: none; padding-bottom: 14px; }
+  nav.crumbs a.active { color: var(--ink); border-bottom: 2px solid var(--ink); }
+
+  .wrap { max-width: 780px; margin: 0 auto; padding: 36px 24px 80px; }
+
+  .tag {
+    display: inline-block;
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    font-weight: 700;
+    background: var(--coral);
+    color: #6b1f16;
+    padding: 5px 12px;
+    border-radius: 20px;
+    margin-bottom: 14px;
+  }
+  h1 { font-weight: 700; font-size: 36px; margin: 0 0 12px; line-height: 1.15; }
+  .intro { font-size: 15.5px; margin-bottom: 8px; color: #3a3a3a; }
+
+  h2 {
+    font-weight: 700;
+    font-size: 15px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin: 44px 0 4px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--coral);
+    color: var(--coral-deep);
+  }
+  h3 {
+    font-weight: 600;
+    font-size: 17px;
+    margin: 22px 0 6px;
+    color: #4a2b26;
+  }
+  p { font-size: 15.5px; margin: 8px 0; }
+  ul { margin: 8px 0 0; padding-left: 22px; }
+  li { font-size: 15.5px; margin-bottom: 6px; }
+  strong { font-weight: 700; }
+
+  .sling-box {
+    background: #fff;
+    border: 1px solid var(--coral);
+    border-radius: 14px;
+    padding: 22px 24px;
+    margin-top: 16px;
+  }
+  .sling-box .step {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 14px;
+  }
+  .sling-box .step:last-child { margin-bottom: 0; }
+  .sling-box .step .icon {
+    flex-shrink: 0;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: var(--coral);
+    color: #6b1f16;
+    font-weight: 700;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .sling-box .step p { margin: 0; font-size: 15px; }
+
+  .callout {
+    background: var(--blush);
+    border-left: 4px solid var(--coral-deep);
+    padding: 12px 16px;
+    border-radius: 0 8px 8px 0;
+    margin: 18px 0;
+    font-size: 15px;
+  }
+  .callout.warn {
+    background: #fff3f0;
+    border-left-color: #b23b2c;
+    font-weight: 600;
+  }
+
+  .pagenav {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 60px;
+    padding-top: 24px;
+    border-top: 2px solid var(--coral);
+    font-size: 14px;
+    font-weight: 600;
+  }
+  .pagenav a { color: var(--coral-deep); text-decoration: none; }
+
+  footer {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 0 24px 60px;
+    font-size: 12px;
+    color: var(--gray);
+  }
+</style>
+</head>
+<body>
+  <div class="topbar"></div>
+  <header>
+    <svg class="mark" viewBox="165 80 390 475" aria-hidden="true">
+      <path d="M368,150 C395,110 450,90 510,100 C495,140 450,168 405,158 C388,154 372,155 368,150 Z" fill="#A8C93A"/>
+      <path d="M372,148 C400,144 430,132 455,116" stroke="#ffffff" stroke-width="2" fill="none" opacity="0.45" stroke-linecap="round"/>
+      <path d="M362,158 C358,138 362,116 372,98" stroke="#7A5222" stroke-width="7" fill="none" stroke-linecap="round"/>
+      <circle cx="360" cy="360" r="185" fill="#F5911E"/>
+      <path d="M300,210 C240,250 232,470 300,510 C260,470 258,250 300,210 Z" fill="#FFFFFF" opacity="0.5"/>
+      <path d="M300,210 C240,250 232,470 300,510" stroke="#ffffff" stroke-width="3" fill="none" opacity="0.7" stroke-linecap="round"/>
+    </svg>
+  </header>
+
+  <nav class="crumbs">
+    <a href="index.html">All Policies</a>
+    <a href="policy-absenteeism.html" class="active">Absenteeism &amp; Tardiness</a>
+  </nav>
+
+  <div class="wrap">
+    <span class="tag">HR Policy</span>
+    <h1>Absenteeism &amp; Tardiness</h1>
+    <p class="intro">We operate in a team-oriented environment — everyone counts on each other to get the job done. You're expected to report to work on time, observe break limits, and not leave early without prior approval from your supervisor.</p>
+
+    <h2>Requesting Time Off &amp; Shift Swaps (Sling)</h2>
+    <div class="sling-box">
+      <div class="step">
+        <div class="icon">1</div>
+        <p>Submit time-off requests in <strong>Sling</strong> as soon as possible — no later than <strong>2 weeks</strong> before the date(s) requested.</p>
+      </div>
+      <div class="step">
+        <div class="icon">2</div>
+        <p>Requests are handled <strong>first come, first served.</strong> Submitting early gives you the best chance of approval.</p>
+      </div>
+      <div class="step">
+        <div class="icon">3</div>
+        <p>During busy periods, time off may be <strong>denied</strong> — be aware of this before booking travel or making plans.</p>
+      </div>
+      <div class="step">
+        <div class="icon">4</div>
+        <p>Trading shifts with a coworker? The swap must be <strong>requested in Sling and approved by the MOD and/or GM</strong> before it's official.</p>
+      </div>
+      <div class="step">
+        <div class="icon">5</div>
+        <p>If no one is found to cover your shift, you are still expected to work it as scheduled. Not showing up will be treated as a <strong>no call/no show.</strong></p>
+      </div>
+    </div>
+
+    <h2>What Counts as an Absence</h2>
+    <p>An absence is any time you're scheduled to work and don't report, or don't complete your scheduled shift. This includes sick days, but not pre-approved paid time off, holidays, or leaves of absence. A partial-day absence is any day you work less than your scheduled shift in a way the company doesn't consider tardy.</p>
+
+    <h2>Reporting an Absence</h2>
+    <ul>
+      <li>Notify your supervisor at least <strong>4 hours before</strong> your scheduled shift if you'll be absent or more than 30 minutes late.</li>
+      <li>Reporting an absence does not automatically excuse it.</li>
+      <li>Calling out to a coworker instead of your supervisor is not allowed.</li>
+      <li>Failing to notify your supervisor in time is a <strong>No Call/No Show</strong> and may lead to corrective action, including termination.</li>
+    </ul>
+    <div class="callout warn">Missing two consecutive shifts without notifying your supervisor is considered job abandonment and treated as a voluntary resignation.</div>
+
+    <h2>Excessive Absenteeism</h2>
+    <p>Even a reported absence can lead to corrective action if it happens too often. Examples of excessive absenteeism:</p>
+    <ul>
+      <li>3 separate absences in any 30-day period</li>
+      <li>5 separate absences in any 6-month period</li>
+    </ul>
+    <p>A "separate absence" means any full or partial day absent, or one or more consecutive days absent for the same reason. Pre-approved time off for medical/dental appointments, school activities, or personal business (approved before the schedule is posted) won't count as excessive — but it will still be documented as an absence.</p>
+    <p>The company may request a doctor's note if you're absent more than two consecutive working days within a 7-day period.</p>
+
+    <h2>Tardiness</h2>
+    <p>You're considered tardy if you arrive more than <strong>7 minutes but less than 30 minutes late</strong>, or aren't properly groomed, dressed, and ready to work at the start of your shift. Returning late from a break also counts as tardy. If you're <strong>30 minutes or more</strong> late, it's treated as an absence and follows the absence reporting process above.</p>
+    <ul>
+      <li>Contact your supervisor personally before your shift starts if you'll be late, unless physically unable — have someone call for you in that case.</li>
+      <li>Reporting your tardiness is required, but doesn't excuse it.</li>
+      <li>Excessive tardiness — even when reported — will result in corrective action up to and including termination.</li>
+    </ul>
+
+    <div class="pagenav">
+      <a href="index.html">← Back to All Policies</a>
+    </div>
+  </div>
+
+  <footer>Peached &middot; Internal Policy Center</footer>
+</body>
+</html>
