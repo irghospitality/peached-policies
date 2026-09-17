@@ -36,9 +36,26 @@
     align-items: center;
     justify-content: center;
     gap: 10px;
+    position: relative;
   }
   .mark { width: 40px; height: 40px; flex-shrink: 0; }
-  .wordmark { font-family: 'Pacifico', cursive; font-size: 28px; }
+
+  .lang-btn {
+    position: absolute;
+    right: 24px;
+    top: 44px;
+    background: #fff;
+    border: 1px solid var(--coral);
+    color: #6b1f16;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: 0.05em;
+    padding: 7px 14px;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+  .lang-btn:hover { background: var(--blush); }
 
   .wrap { max-width: 780px; margin: 0 auto; padding: 8px 24px 96px; }
 
@@ -50,14 +67,21 @@
     font-weight: 700;
     margin-bottom: 10px;
   }
+  .section-label {
+    font-size: 13px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--gray);
+    margin: 36px 0 12px;
+  }
   h1 { font-weight: 700; font-size: 34px; margin: 0 0 12px; line-height: 1.15; }
-  .intro { font-size: 16px; margin-bottom: 40px; color: #3a3a3a; }
+  .intro { font-size: 16px; margin-bottom: 24px; color: #3a3a3a; }
 
   .policy-list {
     display: flex;
     flex-direction: column;
     gap: 14px;
-    margin-bottom: 48px;
   }
   .policy-card {
     display: flex;
@@ -85,20 +109,12 @@
   .policy-card .info h2 { font-size: 18px; margin: 0; font-weight: 600; }
   .policy-card .arrow { font-size: 18px; color: var(--gray); }
 
-  .add-note {
-    font-size: 13px;
-    color: var(--gray);
-    border: 1px dashed var(--gray);
-    border-radius: 10px;
-    padding: 14px 16px;
-    margin-bottom: 48px;
-  }
-
   .sign-box {
     padding: 30px;
     border-radius: 14px;
     background: var(--blush);
     border: 1px solid var(--coral);
+    margin-top: 40px;
   }
   .sign-box .eyebrow { color: #8a5a3c; }
   .sign-box p { margin-top: 0; color: #4a3a30; font-size: 14.5px; }
@@ -123,11 +139,15 @@
     font-size: 12px;
     color: var(--gray);
   }
+
+  html.lang-es .lang-en-only { display: none; }
+  html:not(.lang-es) .lang-es-only { display: none; }
 </style>
 </head>
 <body>
   <div class="topbar"></div>
   <header>
+    <button class="lang-btn" id="lang-toggle" type="button">Español</button>
     <svg class="mark" viewBox="165 80 390 475" aria-hidden="true">
       <path d="M368,150 C395,110 450,90 510,100 C495,140 450,168 405,158 C388,154 372,155 368,150 Z" fill="#A8C93A"/>
       <path d="M372,148 C400,144 430,132 455,116" stroke="#ffffff" stroke-width="2" fill="none" opacity="0.45" stroke-linecap="round"/>
@@ -139,52 +159,162 @@
   </header>
 
   <div class="wrap">
-    <div class="eyebrow">New Hire Resources</div>
-    <h1>Peached Policy Hub</h1>
-    <p class="intro">In addition to the general employee handbook, the following policies are specific to this location/brand. Please read each one below, then sign off at the bottom of this page.</p>
+    <!-- ENGLISH -->
+    <div class="lang-en-only">
+      <div class="eyebrow">New Hire Resources</div>
+      <h1>Peached Policy Hub</h1>
+      <p class="intro">In addition to the general employee handbook, the following policies are specific to this location/brand. Please read each one below, then sign off at the bottom of this page.</p>
 
-    <div class="policy-list">
-      <a class="policy-card" href="policy-overview.html">
-        <span class="dot" style="background:var(--peach)"></span>
-        <span class="info">
-          <span class="tag">Policy</span>
-          <h2>Break &amp; Meal Periods Policy</h2>
-        </span>
-        <span class="arrow">→</span>
-      </a>
-      <a class="policy-card" href="policy-uniform.html">
-        <span class="dot" style="background:var(--coral)"></span>
-        <span class="info">
-          <span class="tag">Policy</span>
-          <h2>FOH Dress Code</h2>
-        </span>
-        <span class="arrow">→</span>
-      </a>
-      <a class="policy-card" href="policy-parking.html">
-        <span class="dot" style="background:#999999"></span>
-        <span class="info">
-          <span class="tag">Policy</span>
-          <h2>Parking</h2>
-        </span>
-        <span class="arrow">→</span>
-      </a>
-      <a class="policy-card" href="policy-pto.html">
-        <span class="dot" style="background:#C98A2E"></span>
-        <span class="info">
-          <span class="tag">Policy</span>
-          <h2>Requesting PTO</h2>
-        </span>
-        <span class="arrow">→</span>
-      </a>
+      <div class="section-label">Policies</div>
+      <div class="policy-list">
+        <a class="policy-card" href="policy-overview.html">
+          <span class="dot" style="background:var(--peach)"></span>
+          <span class="info">
+            <span class="tag">Policy</span>
+            <h2>Break &amp; Meal Periods Policy</h2>
+          </span>
+          <span class="arrow">→</span>
+        </a>
+        <a class="policy-card" href="policy-uniform.html">
+          <span class="dot" style="background:var(--coral)"></span>
+          <span class="info">
+            <span class="tag">Policy · TPT Burnet</span>
+            <h2>FOH Dress Code — Burnet</h2>
+          </span>
+          <span class="arrow">→</span>
+        </a>
+        <a class="policy-card" href="policy-dresscode-cedarpark.html">
+          <span class="dot" style="background:var(--coral)"></span>
+          <span class="info">
+            <span class="tag">Policy · TPT Cedar Park</span>
+            <h2>FOH Dress Code — Cedar Park</h2>
+          </span>
+          <span class="arrow">→</span>
+        </a>
+        <a class="policy-card" href="policy-parking.html">
+          <span class="dot" style="background:#999999"></span>
+          <span class="info">
+            <span class="tag">Policy</span>
+            <h2>Parking</h2>
+          </span>
+          <span class="arrow">→</span>
+        </a>
+        <a class="policy-card" href="policy-absenteeism.html">
+          <span class="dot" style="background:var(--coral)"></span>
+          <span class="info">
+            <span class="tag">Policy</span>
+            <h2>Absenteeism &amp; Tardiness</h2>
+          </span>
+          <span class="arrow">→</span>
+        </a>
+      </div>
+
+      <div class="section-label">Resources</div>
+      <div class="policy-list">
+        <a class="policy-card" href="resource-sling.html">
+          <span class="dot" style="background:var(--lime)"></span>
+          <span class="info">
+            <span class="tag">Training</span>
+            <h2>Sling Tutorials</h2>
+          </span>
+          <span class="arrow">→</span>
+        </a>
+      </div>
+
+      <div class="sign-box">
+        <div class="eyebrow">Sign off</div>
+        <p>Once you've read all of the policies above, confirm which ones you've read and agree to. This opens a short form — check every policy listed so it's logged correctly under your name.</p>
+        <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSekRxkaLxSOjsXi6k_GWYt8fySSYSionmCMiHMFT0kzPUgNZQ/viewform" target="_blank" rel="noopener">Sign off on policies →</a>
+      </div>
     </div>
 
-    <div class="sign-box">
-      <div class="eyebrow">Sign off</div>
-      <p>Once you've read all of the policies above, confirm which ones you've read and agree to. This opens a short form — check every policy listed so it's logged correctly under your name.</p>
-      <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSekRxkaLxSOjsXi6k_GWYt8fySSYSionmCMiHMFT0kzPUgNZQ/viewform" target="_blank" rel="noopener">Sign off on policies →</a>
+    <!-- SPANISH -->
+    <div class="lang-es-only">
+      <div class="eyebrow">Recursos Para Nuevos Empleados</div>
+      <h1>Centro de Políticas de Peached</h1>
+      <p class="intro">Además del manual general del empleado, las siguientes políticas son específicas de esta ubicación/marca. Por favor lea cada una a continuación y luego firme al final de esta página.</p>
+
+      <div class="section-label">Políticas</div>
+      <div class="policy-list">
+        <a class="policy-card" href="policy-overview.html">
+          <span class="dot" style="background:var(--peach)"></span>
+          <span class="info">
+            <span class="tag">Política</span>
+            <h2>Política de Descansos y Comidas</h2>
+          </span>
+          <span class="arrow">→</span>
+        </a>
+        <a class="policy-card" href="policy-uniform.html">
+          <span class="dot" style="background:var(--coral)"></span>
+          <span class="info">
+            <span class="tag">Política · TPT Burnet</span>
+            <h2>Código de Vestimenta — Burnet</h2>
+          </span>
+          <span class="arrow">→</span>
+        </a>
+        <a class="policy-card" href="policy-dresscode-cedarpark.html">
+          <span class="dot" style="background:var(--coral)"></span>
+          <span class="info">
+            <span class="tag">Política · TPT Cedar Park</span>
+            <h2>Código de Vestimenta — Cedar Park</h2>
+          </span>
+          <span class="arrow">→</span>
+        </a>
+        <a class="policy-card" href="policy-parking.html">
+          <span class="dot" style="background:#999999"></span>
+          <span class="info">
+            <span class="tag">Política</span>
+            <h2>Estacionamiento</h2>
+          </span>
+          <span class="arrow">→</span>
+        </a>
+        <a class="policy-card" href="policy-absenteeism.html">
+          <span class="dot" style="background:var(--coral)"></span>
+          <span class="info">
+            <span class="tag">Política</span>
+            <h2>Ausentismo y Tardanzas</h2>
+          </span>
+          <span class="arrow">→</span>
+        </a>
+      </div>
+
+      <div class="section-label">Recursos</div>
+      <div class="policy-list">
+        <a class="policy-card" href="resource-sling.html">
+          <span class="dot" style="background:var(--lime)"></span>
+          <span class="info">
+            <span class="tag">Capacitación</span>
+            <h2>Tutoriales de Sling</h2>
+          </span>
+          <span class="arrow">→</span>
+        </a>
+      </div>
+
+      <div class="sign-box">
+        <div class="eyebrow">Firma</div>
+        <p>Una vez que haya leído todas las políticas anteriores, confirme cuáles ha leído y acepta. Esto abrirá un formulario breve — marque cada política enumerada para que quede registrada correctamente bajo su nombre.</p>
+        <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSekRxkaLxSOjsXi6k_GWYt8fySSYSionmCMiHMFT0kzPUgNZQ/viewform" target="_blank" rel="noopener">Firmar las políticas →</a>
+      </div>
     </div>
   </div>
 
-  <footer>Peached &middot; Internal Policy Center</footer>
+  <footer class="lang-en-only">Peached &middot; Internal Policy Center</footer>
+  <footer class="lang-es-only">Peached &middot; Centro de Políticas Internas</footer>
+
+  <script>
+    (function () {
+      var btn = document.getElementById('lang-toggle');
+      function apply(lang) {
+        document.documentElement.classList.toggle('lang-es', lang === 'es');
+        btn.textContent = lang === 'es' ? 'English' : 'Español';
+        localStorage.setItem('peachedLang', lang);
+      }
+      btn.addEventListener('click', function () {
+        var current = document.documentElement.classList.contains('lang-es') ? 'es' : 'en';
+        apply(current === 'es' ? 'en' : 'es');
+      });
+      apply(localStorage.getItem('peachedLang') || 'en');
+    })();
+  </script>
 </body>
 </html>
